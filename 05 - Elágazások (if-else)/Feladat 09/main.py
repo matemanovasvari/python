@@ -7,7 +7,7 @@ x = int(input())
 print("Kérem a második számot!")
 y = int(input())
 
-if ((x % y) == 0):
+if (x % y == 0):
     print("A második szám osztható az elsővel!")
 
 else:
