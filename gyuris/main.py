@@ -1,25 +1,28 @@
 from cmath import sqrt
 import math
+from re import S
+import sys
+a: int = int(input("Kérem az a értékét!:"))
+b: int = int(input("Kérem a b értékét!:"))
+c: int = int(input("Kérem a c értékét!:"))
+x = -2 * a
 
+gyoke: int = math.pow(b,2)-4 * a * c
 
-a: int=None
-b: int=None
-c: int=None
-x1: int=None
-x2: int=None
+if gyoke < 0:
+    print("Nincs értelme!")
+    sys.exit()
 
-print("Kérem adja meg az értéket")
-a=int(input())
+d: float = math.sqrt(gyoke)
 
-print("Kérem adja meg az értéket")
-b=int(input())
+x1: float = (-b - d) / (2 * a)
+x2: float = (-b + d) / (2 * a)
 
-print("Kérem adja meg az értéket")
-c=int(input())
+if (x1 != x and x2 != x):
+    print(f"{x1} {x2}")
 
-x1=(-b+math.sqrt(math.pow(b,2)-4*a*c))/(2*a)
+elif (x1 == x and x2 != x):
+    print(f"{x2}")
 
-x2=(-b-math.sqrt(math.pow(b,2)-4*a*c))/(2*a)1
-
-print(f"A másodfokú egyenlet két megoldása {x1} és {x2}")
-
+elif (x2 == x and x1 != x):
+    print(f"{x1}")
