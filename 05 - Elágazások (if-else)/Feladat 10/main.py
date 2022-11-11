@@ -11,3 +11,4 @@ elif (myNumber % 3 == 0):
     print("BAZ")
 else:
     print("A szám semelyikkel sem osztható!")
+    
