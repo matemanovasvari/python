@@ -1,7 +1,7 @@
 month: str = None
 
 print("Kérem a hónapot(szövegesen)")
-month = str(input())
+month = str(input()).lower().strip()
 
 match month:
     case "Január":
